@@ -14,6 +14,7 @@ author :
 
 permalink: /:year/:month/:title
 paginate: 7
+excerpt_separator: <!--more-->
 
 defaults:
  -  scope:
