@@ -1,0 +1,107 @@
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>WASM.NEWS | HowTo</title>
+
+    <meta name="description" content="Spreading the News about WebAssembly since 2015">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" href="https://wasm.news/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wasm.news/icon/57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wasm.news/icon/60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wasm.news/icon/72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wasm.news/icon/76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wasm.news/icon/114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wasm.news/icon/120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wasm.news/icon/144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wasm.news/icon/152.png" />
+
+    <meta name="application-name" content="WASM.NEWS" />
+    <meta name="msapplication-config" content="https://wasm.news/browserconfig.xml" />
+
+    <!--[if lt IE 8]><meta http-equiv="refresh" content="0; url=http://browsehappy.com/?locale=en" /><script type="text/javascript">window.location.href = "http://browsehappy.com/?locale=en"</script><style>body {display:none !important}</style><![endif]-->
+
+    <script>var doc = document.documentElement; doc.className = doc.className.replace("no-js", "");</script>
+
+    <!--<link href="/css/atf.css" rel="stylesheet" />-->
+    <style>@font-face{font-family:'WASM';font-style:normal;font-weight:800;src:url(/font/wasm.eot);src:url(/font/wasm.eot?#iefix) format("embedded-opentype"),url("data:font/x-woff;base64,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") format("woff"),url("/font/wasm.ttf") format("truetype"),Url("/font/wasm.svg?#jsorg") format("svg");unicode-range:U+E900-E906}@font-face{font-family:'SrcSans';font-style:normal;font-weight:400;src:local("Source Sans Pro"),local("SourceSansPro-Regular"),url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff2) format("woff2"),url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format("woff");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000}@font-face{font-family:'SrcSans';font-style:normal;font-weight:700;src:local("Source Sans Pro Bold"),local("SourceSansPro-Bold"),url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2) format("woff2"),url(https://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format("woff");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000}@font-face{font-family:'SrcCode';font-style:normal;font-weight:400;src:local("Source Code Pro"),local("SourceCodePro-Regular"),url(https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format("woff2"),url(https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff) format("woff");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000}html{background-color:#55acee}body{padding:0 5%;margin:4em auto;max-width:800px;overflow-x:hidden;font-family:'SrcSans',Helvetica, Arial, sans-serif;line-height:1.5;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;color:#222}.btf{opacity:0}::-webkit-scrollbar{width:.8em}::-webkit-scrollbar-track{background:rgba(34,34,34,0.2)}::-webkit-scrollbar-thumb{background:#fff}::-webkit-scrollbar-thumb:active{background:#222}a{outline:none;border:none;text-decoration:none;font-weight:700;color:#222}.icon{font-family:'WASM';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.hero{margin:2em 0}.hero p:first-child{font-size:1.5em}.hf{margin:2em -4px;border-collapse:separate;border-spacing:4px}.hf,.hf a,.hf h1{font-weight:400;color:#fff}.hf td{vertical-align:bottom;margin:0;padding:0}.hf td.hr{border-top:2px solid #fff}.hf .logo{width:100%;font-size:4em}.hf .logo.small{font-size:2em}.hf .logo.small a{margin-right:5px}.hf .tw,.hf .gh{display:block;font-size:2em;text-align:center}.hf #ghs{visibility:hidden;float:right;line-height:2em;min-width:4em;padding-right:0.3em;text-align:center;font-weight:700;background:#fff;color:#55acee}.hf #ghs:before{content:"\e904";font-size:2em;vertical-align:bottom}.hf h1{font-size:1em;margin:0}.hf .at{font-size:.8em}.hf .at .copy{float:right}nav{border-top:2px solid #fff}nav div{display:table;border-collapse:collapse;box-shadow:rgba(0,0,0,0.1) 1px 3px 14px}nav div.menu a,nav div.menu span{padding:0 .5em}nav a,nav span{display:table-cell;border:0 solid #fff;margin:0 .5em;font-weight:700;width:2em;height:2em;line-height:1.9em;text-align:center;white-space:nowrap;border-width:0 2px 2px 2px}nav span.active{background:#fff}nav.top{margin-top:2em;border-top:none;border-bottom:2px solid #fff;position:relative}nav.top a,nav.top span{border-width:2px 2px 0 2px}</style>
+
+</head>
+<body>
+    <canvas id="xing"></canvas>
+    <table class="hf">
+        <tr class="icon"><td class="logo"><a href="/" rel="home" title="WASM.NEWS | Spreading the News about WebAssembly since 2015">&#xe900;</a></td><td><a class="tw" href="https://github.com/wasm-news/wasm.news" rel="nofollow" target="_blank" title="Github">&#xe904;</a></td><td><a class="gh" href="https://twitter.com/wasm_news" rel="nofollow" target="_blank" title="Twitter">&#xe905;</a></td></tr>
+        <tr><td colspan="3" class="hr"><h1 class="serif">Spreading the News about WebAssembly since 2015</h1></td></tr>
+    </table>
+    
+    <nav class="top"><div class="menu"><a href="/">Home</a></div></nav>
+    <div class="btf">
+        <article>
+            <div class="head right">
+                <h3>CONTRIBUTING</h3>
+                <h2>HowTo add a post to WASM.NEWS</h2>
+            </div>
+            <div class="body">
+                <p>This page is hosted on GitHub using the static site generator <a href="http://jekyllrb.com/" target="_blank" rel="nofollow">jekyll</a>. Posts are written as markdown files (.md). If you want to post something on WASM.NEWS you should make a pull request with your post that could easily be merged.</p>
+                <p>Just head to the post folder in the repository, click on <em>New file</em> and enter a name matching the scheme: <code style="white-space:nowrap">YYYY-MM-DD-Title-of-the-post.md</code></p>
+                <p>Then add the necessary informations to the file, following the instructions below and click on <em>Commit new file</em>.</p>
+
+                <h1>Link to another website</h1>
+                <p>It is totally ok if you just want to link to another website. You only need to put the metadata (at least the title, and the external URL) of the post between triple slashes as shown below.</p>
+                <code>---
+                    title: "The Title of the post"
+                    urlex: "http://link/to/page.html"
+                    author:
+                    &nbsp;&nbsp;name: John Doe
+                    &nbsp;&nbsp;url: "https://johndoe.html"
+                    categories: [catA, catB]
+                    tags: [tagA, tagB]
+                    excerpt: A short description
+                    ---
+                </code>
+
+                <h1>Write a full post</h1>
+                <p>If you plan to publish a full post directly on WASM.NEWS, you would just  leave out the external URL. Instead you add the content of your post below the metadata section.</p>
+                <code>---
+                    title: "The Title of the post"
+                    author:
+                    &nbsp;&nbsp;name: John Doe
+                    &nbsp;&nbsp;url: "http://johndoe.html"
+                    categories: [catA, catB]
+                    tags: [tagA, tagB]
+                    excerpt: A short description
+                    ---
+                    The body of a *full* blog post formated in [markdown](http://whatismarkdown.com/)
+                </code>
+                <br>
+                <p><strong>Thats all!</strong> I will try to merge every pull-request as soon as possible...</p>
+            </div>
+        </article>
+        <div id="disqus_thread"></div>
+    <script>var disqus_config = function () { this.page.url = "https://wasm.newshowto.html"; this.page.identifier = ""; }; (function () { var d = document, s = d.createElement('script'); s.src = '//wasmnews.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();</script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+    
+    
+    <table class="hf">
+        <tr class="icon">
+            <td class="logo small"><a href="/" rel="home" title="WASM.NEWS | Spreading the News about WebAssembly since 2015">&#xe901;</a><a href="/rss.xml" rel="alternate" target="_blank" title="RSS-Feed">&#xe902;</a></td>
+            <td><a id="ghs" href="https://github.com/wasm-news/wasm.news" rel="nofollow" target="_blank" title="GitHub"></a></td>
+        </tr>
+        <tr><td colspan="2" class="hr at"><a href="/disclaimer.html" title="Disclaimer">Disclaimer</a>&nbsp;&#x25cf;&nbsp;<a href="/legals.html" title="Impressum/Legals">Impressum/Legals</a><span class="copy">&copy; 2015 <a href="http://js.org" target="_blank" title="JS.ORG">JS.ORG</a></span></td></tr>
+    </table>
+    <link href="/css/btf.css" rel="stylesheet" />
+    <script src="/js/xing.js" async defer></script>
+    <script>
+        var _paq = _paq || []; _paq.push(['setDocumentTitle', document.domain + '/' + document.title]); _paq.push(['setCookieDomain', '*.wasm.news']); _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function () { var u = '//piwik.js.org/'; _paq.push(['setTrackerUrl', u + 'piwik.php']); _paq.push(['setSiteId', 3]); var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s); })();
+        (function () { var h = document.getElementsByTagName('head')[0], id = 'callback_' + Math.random().toString(36).substr(2, 16), el = document.createElement('script'), ghs = document.getElementById('ghs'); el.type = 'text/javascript'; el.async = true; el.defer = true; window[id] = function (obj) { ghs.innerHTML = obj.data.watchers || ''; if (obj.data.watchers) ghs.style.visibility = 'visible' }; el.src = 'https://api.github.com/repos/wasm-news/wasm.news?callback=' + id; h.insertBefore(el, h.firstChild) })();
+    </script>
+</body>
+</html>
+
