@@ -1,0 +1,24 @@
+---
+title: Tags
+---
+<nav class="top" role="navigation">
+        <div class="menu">
+            <a href="/" rel="home">Home</a>
+            <a href="{{site.path_archive}}" rel="toc">Archive</a>
+            <span class="active" rel="glossary">Categories</span>
+            <a href="{{site.path_tag}}">Tags</a>
+        </div>
+    </nav>
+    <div class="btf">{% for cat in site.categories %}
+        <article id="{{cat[0] | downcase}}">
+            <div class="head"><h3>{{cat[0]}}</h3></div>
+            <div class="body">
+                <ul>{% for post in cat[1] %}{% if post.title != null %}
+                    <li>
+                        <a {% include link_attr.html %}>{{post.title}}</a> -
+                        <a href="{{site.path_archive}}#{{post.date | date: '%B-%Y' | downcase}}" title="show archive: {{post.date | date: '%B %Y'}}" value="{{post.date}}" rel="date">{{post.date | date_to_string}}</a>
+                    </li>{% endif %}{% endfor %}
+                </ul>
+            </div>
+        </article>{% endfor %}
+    </div>

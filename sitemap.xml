@@ -1,0 +1,52 @@
+---
+layout : null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://wasm.news/index.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>{% assign page_num = site.posts.size | minus:1 | divided_by: site.paginate %}{% for i in (2..99) limit:page_num %}
+  <url>
+    <loc>https://wasm.news/page{{i}}/index.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.2</priority>
+  </url>{% endfor %}
+  <url>
+    <loc>https://wasm.news/archive.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wasm.news/categories.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wasm.news/tags.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wasm.news/disclaimer.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>https://wasm.news/legals.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>https://wasm.news/howto.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>{% for post in site.posts %}
+  <url><loc>{{site.customurl}}{{ post.url }}</loc></url>{% endfor %}
+</urlset>

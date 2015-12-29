@@ -1,1 +1,24 @@
-https://wasm.news
+---
+---
+{% if paginator.page == 1 %}{% include hero.html %}{% else %}{% include pagination.html class='top' %}{% endif %}
+    <div class="btf">{% for post in paginator.posts %}
+        <article>{% if post.urlex %}{% assign url = post.urlex %}{% else %}{% assign url = (post.url | prepend:"http://wasm.news")  %}{% endif %}{% assign url_split = url | split:"/" %}
+            <div class="head right">
+                <a {% include link_attr.html %}>
+                    <h3>{{url_split[2]}}</h3>
+                    <h2>{{post.title}}</h2>
+                </a>
+            </div>
+            <div class="body">
+                {{post.excerpt | strip_newlines}}
+            </div>
+            <div class="rfer">
+                 posted on <a href="{{site.path_archive}}#{{post.date | date: '%B-%Y' | downcase }}" title="show archive: {{post.date | date: '%B %Y'}}" value="{{post.date}}" rel="date">{{ post.date | date_to_string }}</a>
+                {% if post.author %} by <a href="{{post.author.url}}" rel="author nofollow" target="_blank">{{post.author.name}}</a>{% else %} <!-- by WASM.NEWS -->{% endif %}
+                {% unless post.categories == empty %} in {% include taxonomy.html type='cat' %}{% endunless %}
+                {% unless post.tags == empty %} tagged with {% include taxonomy.html type='tag' %}{% else %} without tags{% endunless %}.
+                <a href="{{ site.customurl }}{{ post.url }}#disqus_thread">0 Comments</a>
+            </div>
+        </article>{% endfor %}
+    </div>{% include pagination.html %}
+    <script id="dsq-count-scr" src="//wasmnews.disqus.com/count.js" async defer></script>

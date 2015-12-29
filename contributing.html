@@ -1,0 +1,49 @@
+---
+title : HowTo
+---
+<nav class="top"><div class="menu"><a href="/">Home</a></div></nav>
+    <div class="btf">
+        <article>
+            <div class="head right">
+                <h3>CONTRIBUTING</h3>
+                <h2>HowTo add a post to WASM.NEWS</h2>
+            </div>
+            <div class="body">
+                <p>This page is hosted on GitHub using the static site generator <a href="http://jekyllrb.com/" target="_blank" rel="nofollow">jekyll</a>. Posts are written as markdown files (.md). If you want to post something on WASM.NEWS you should make a pull request with your post that could easily be merged.</p>
+                <p>Just head to the post folder in the repository, click on <em>New file</em> and enter a name matching the scheme: <code style="white-space:nowrap">YYYY-MM-DD-Title-of-the-post.md</code></p>
+                <p>Then add the necessary informations to the file, following the instructions below and click on <em>Commit new file</em>.</p>
+
+                <h1>Link to another website</h1>
+                <p>It is totally ok if you just want to link to another website. You only need to put the metadata (at least the title, and the external URL) of the post between triple slashes as shown below.</p>
+                <code>---
+                    title: "The Title of the post"
+                    urlex: "http://link/to/page.html"
+                    author:
+                    &nbsp;&nbsp;name: John Doe
+                    &nbsp;&nbsp;url: "https://johndoe.html"
+                    categories: [catA, catB]
+                    tags: [tagA, tagB]
+                    excerpt: A short description
+                    ---
+                </code>
+
+                <h1>Write a full post</h1>
+                <p>If you plan to publish a full post directly on WASM.NEWS, you would just  leave out the external URL. Instead you add the content of your post below the metadata section.</p>
+                <code>---
+                    title: "The Title of the post"
+                    author:
+                    &nbsp;&nbsp;name: John Doe
+                    &nbsp;&nbsp;url: "http://johndoe.html"
+                    categories: [catA, catB]
+                    tags: [tagA, tagB]
+                    excerpt: A short description
+                    ---
+                    The body of a *full* blog post formated in [markdown](http://whatismarkdown.com/)
+                </code>
+                <br>
+                <p><strong>Thats all!</strong> I will try to merge every pull-request as soon as possible...</p>
+            </div>
+        </article>
+        {% include disqus.html url="howto.html" identifier="howto" %}
+    </div>
+    

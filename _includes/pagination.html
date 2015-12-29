@@ -1,0 +1,15 @@
+{% assign tpm1 = paginator.total_pages | minus:1 %}{% assign tpm3 = paginator.total_pages | minus:3 %}
+    <nav role="navigation" class="{{include.class}}">
+        <div>{% if paginator.page > 1 %}
+            <a href="/" rel="home">1</a>{% endif %}{% if paginator.previous_page > 2 %}{% if paginator.page == 4 %}
+            <a href="/page2">2</a>{% else %}
+            <span>…</span>{% endif %}{% endif %}{% if paginator.page > 2 %}
+            <a href="{{ BASE_PATH }}{{ paginator.previous_page_path }}" class="previous" rel="previous">{{paginator.previous_page}}</a>{% endif %}{% if paginator.page %}
+            <span class="page-numbers active">{{paginator.page}}</span>{% endif %}{% if paginator.page < tpm1 %}
+            <a href="{{ JB.BASE_PATH }}{{ paginator.next_page_path }}" class="next" rel="next">{{paginator.next_page}}</a>{% endif %}{% if paginator.page == 1 and paginator.total_pages > 3 %}
+            <a href="/page3">3</a>{% endif %}{% if paginator.next_page < tpm1 and paginator.total_pages > 4 %}{% if paginator.page == tpm3 %}
+            <a href="/page{{tpm1}}">{{tpm1}}</a>{% else %}
+            <span>…</span>{% endif %}{% endif %}{% if paginator.page != paginator.total_pages %}
+            <a href="/page{{paginator.total_pages}}" class="previous" rel="previous">{{paginator.total_pages}}</a>{% endif %}
+        </div>
+    </nav>

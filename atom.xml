@@ -1,0 +1,23 @@
+---
+layout: null
+title : Atom Feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }}</title>
+  <link href="{{ site.customurl }}{{ site.path_atom }}" rel="self"/>
+  <link href="{{ site.customurl }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.customurl }}/</id>
+  <author>
+    <name>{{ site.author.name | xml_escape }}</name>
+    <email>{{ site.author.email }}</email>
+  </author>{% for post in site.posts limit:20 %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <link href="{% if post.urlex %}{{post.urlex | xml_escape}}{% else %}{{ site.customurl }}{{post.url}}{% endif %}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>{{ site.customurl }}{{ post.id }}</id>
+    <content type="html">{{ post.content | replace:site.excerpt_separator,'' | xml_escape }}</content>
+  </entry>{% endfor %}
+</feed>

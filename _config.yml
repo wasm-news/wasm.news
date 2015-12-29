@@ -1,0 +1,38 @@
+﻿exclude: [.gitignore, README.md, CNAME, node_modules, gulpfile.js, compilerconfig.json, compilerconfig.json.defaults]
+gems: [jekyll-paginate]
+sass:
+  sass_dir: _scss
+  style: compressed
+
+customurl: "https://wasm.news"
+title: WASM.NEWS
+claim: Spreading the News about WebAssembly since 2015
+author :
+  name : "Keim Stefan"
+  email : "indus@js.org"
+  url : "https://github.com/indus"
+
+permalink: /:year/:month/:title
+paginate: 7
+
+defaults:
+ -  scope:
+      path: ""
+    values:
+      layout: default
+      claim: Spreading the News about WebAssembly since 2015
+ -  scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
+
+
+path_archive: /archive.html
+path_cat: /categories.html
+path_tag: /tags.html
+path_atom: /atom.xml
+path_rss: /rss.xml
+
+github: wasm-news/wasm.news
+twitter: wasm_news

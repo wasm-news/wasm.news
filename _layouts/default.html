@@ -1,0 +1,72 @@
+---
+---
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>WASM.NEWS{% if page.title %} | {{ page.title }}{% endif %}</title>
+
+    <meta name="description" content="Spreading the News about WebAssembly since 2015">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{site.customurl}}/icon/57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{site.customurl}}/icon/60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.customurl}}/icon/72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{site.customurl}}/icon/76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.customurl}}/icon/114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{site.customurl}}/icon/120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.customurl}}/icon/144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.customurl}}/icon/152.png" />
+
+    <meta name="application-name" content="WASM.NEWS" />
+    <meta name="msapplication-config" content="{{site.customurl}}/browserconfig.xml" />
+
+    <!--[if lt IE 8]><meta http-equiv="refresh" content="0; url=http://browsehappy.com/?locale=en" /><script type="text/javascript">window.location.href = "http://browsehappy.com/?locale=en"</script><style>body {display:none !important}</style><![endif]-->
+
+    <script>var doc = document.documentElement; doc.className = doc.className.replace("no-js", "");</script>
+
+    <link href="/css/atf.css" rel="stylesheet" />
+
+</head>
+<body>
+    <canvas id="xing"></canvas>
+    <table class="hf">
+        <tr class="icon"><td class="logo"><a href="/" rel="home" title="WASM.NEWS | {{site.claim}}">&#xe900;</a></td><td><a class="tw" href="https://github.com/{{site.github}}" rel="nofollow" target="_blank" title="Github">&#xe904;</a></td><td><a class="gh" href="https://twitter.com/{{site.twitter}}" rel="nofollow" target="_blank" title="Twitter">&#xe905;</a></td></tr>
+        <tr><td colspan="3" class="hr"><h1 class="serif">{{page.claim}}</h1></td></tr>
+    </table>
+    {% if page.is_post %}{% assign post=page %}
+    <nav class="top"><div class="menu"><a href="/" rel="home">Home</a></div></nav>
+    <div class="btf">
+        <article>
+            <div class="head right">
+                <a href="{{site.path_archive}}#{{page.date | date: '%B-%Y' | downcase}}" value="{{post.date}}" rel="date"><h3>{{ post.date | date_to_string }}</h3></a>
+                <h2>{{post.title}}</h2>
+            </div>
+            <div class="body">{{ content }}</div>
+            <div class="rfer">posted {% if post.author %} by <a href="{{post.author.url}}" rel="author nofollow" target="_blank">{{post.author.name}}</a>{% endif %}{% unless post.categories == empty %} in {% include taxonomy.html type='cat' %}{% endunless %}{% unless post.tags == empty %} tagged with {% include taxonomy.html type='tag' %}{% else %} without tags{% endunless %}.</div>
+        </article>
+    </div>
+    {% include disqus.html url=post.url identifier=post.id %}{% else %}
+    {{ content }}
+    {% endif %}
+    <table class="hf">
+        <tr class="icon">
+            <td class="logo small"><a href="/" rel="home" title="WASM.NEWS | {{site.claim}}">&#xe901;</a><a href="{{site.path_rss}}" rel="alternate" target="_blank" title="RSS-Feed">&#xe902;</a></td>
+            <td><a id="ghs" href="https://github.com/{{site.github}}" rel="nofollow" target="_blank" title="GitHub"></a></td>
+        </tr>
+        <tr><td colspan="2" class="hr at"><a href="/disclaimer.html" title="Disclaimer">Disclaimer</a>&nbsp;&#x25cf;&nbsp;<a href="/legals.html" title="Impressum/Legals">Impressum/Legals</a><span class="copy">&copy; 2015 <a href="http://js.org" target="_blank" title="JS.ORG">JS.ORG</a></span></td></tr>
+    </table>
+    <link href="/css/btf.css" rel="stylesheet" />
+    <script src="/js/xing.js" async defer></script>
+    <script>
+        var _paq = _paq || []; _paq.push(['setDocumentTitle', document.domain + '/' + document.title]); _paq.push(['setCookieDomain', '*.js.org']); _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function () { var u = '//piwik.js.org/'; _paq.push(['setTrackerUrl', u + 'piwik.php']); _paq.push(['setSiteId', 3]); var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s); })();
+        (function () { var h = document.getElementsByTagName('head')[0], id = 'callback_' + Math.random().toString(36).substr(2, 16), el = document.createElement('script'), ghs = document.getElementById('ghs'); el.type = 'text/javascript'; el.async = true; el.defer = true; window[id] = function (obj) { ghs.innerHTML = obj.data.watchers || ''; if (obj.data.watchers) ghs.style.visibility = 'visible' }; el.src = 'https://api.github.com/repos/wasm-news/wasm.news?callback=' + id; h.insertBefore(el, h.firstChild) })();
+    </script>
+</body>
+</html>
+

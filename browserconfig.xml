@@ -1,0 +1,15 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="{{site.customurl}}/icon/70.png"/>
+      <square150x150logo src="{{site.customurl}}/icon/150.png"/>
+      <square310x310logo src="{{site.customurl}}/icon/310.png"/>
+      <wide310x150logo src="{{site.customurl}}/icon/310w.png"/>
+      <TileColor>#5EA9DE</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
