@@ -1,0 +1,221 @@
+@import "var";
+
+::-moz-selection {
+    color: $cBgr;
+    background: $cKey;
+}
+
+::selection {
+    color: $cBgr;
+    background: $cKey;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btf {
+    animation: fade 1s ease-in;
+    opacity: 1;
+}
+
+#err404 {
+    text-align: center;
+
+    span {
+        font-size: 5.5em;
+        line-height: 1em;
+        font-weight: 700;
+    }
+}
+
+
+.hf {
+
+    a, .tw, .gh, .ghs {
+        transition: color .6s, background-color .6s;
+
+        &:hover {
+            transition: color .3s, background-color .3s;
+        }
+    }
+
+    a {
+        &:hover {
+            color: rgba($cKey,.6);
+        }
+    }
+
+    .tw, .gh, .ghs {
+        &:hover {
+            color: $cBgr;
+            background: rgba($cKey,.6);
+        }
+    }
+}
+
+article {
+    display: block;
+    position: relative;
+    margin: 1em 0;
+    padding: 0 1em .7em 1em;
+    background: #fff;
+    box-shadow: rgba(0,0,0,.1) 1px 3px 14px;
+
+
+    .head {
+        a[rel="external nofollow"] h3:before {
+            content: "\e903";
+            font-family: "WASM";
+        }
+
+        h2 {
+            padding-top: .6em;
+            line-height: 1em;
+            margin-bottom: .4em;
+        }
+
+        h3 {
+            display: inline-block;
+            line-height: 1;
+            font-weight: 700;
+            margin: 0 1em .4em 0;
+            padding: .6em .6em 0 0;
+            border-right: 2px solid $cBgr;
+            color: $cBgr;
+        }
+
+        &.right h3 {
+            float: right;
+            padding: .6em 0 0 .6em;
+            margin: 0 0 .4em 1em;
+            border-right: 0px;
+            border-left: 2px solid $cBgr;
+        }
+    }
+
+    .body {
+        p {
+            margin-top: .2em;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: .1em;
+        }
+
+        h1 {
+            font-size: 1.2em;
+        }
+
+        h2, h3 {
+            font-size: 1.0em;
+        }
+
+        h4 {
+            font-size: 0.8em;
+        }
+
+        h2, h4 {
+            color: $cBgr;
+            text-transform: uppercase;
+        }
+
+        em {
+            font-style: normal;
+            color: $cBgr;
+            font-weight: 700;
+        }
+
+        fieldset {
+            border: 1px solid $cTxt;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            color: $cTxt;
+            background-color: $cTxt;
+        }
+
+        code, pre {
+            background: lighten($cTxt,75);
+            overflow: hidden;
+            padding: 0 .5em;
+            white-space: pre-line;
+            -webkit-box-decoration-break: clone;
+        }
+
+        blockquote {
+            font-family: "SrcCode";
+            font-size: 0.8em;
+            margin-left: .5em;
+            padding-left: .5em;
+            border-left: 2px solid $cTxt;
+        }
+    }
+
+    .rfer {
+        font-family: "SrcCode";
+        font-size: .75em;
+    }
+}
+
+nav {
+    span {
+        cursor: default;
+    }
+
+    a:hover {
+        background: fade-out($cKey,0.5);
+    }
+}
+
+#xing {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transform: translateZ(0);
+    z-index: -1;
+}
+
+
+#disqus_thread {
+    padding: .5em 1em .5em 1em;
+    margin: 1em 0;
+    background: $cKey;
+}
+
+
+@media (min-width: 1000px) {
+    article {
+        &:before {
+            position: absolute;
+            content: "\e906";
+            font-family: "WASM";
+            left: -120px;
+            top: -20px;
+            font-size: 120px;
+            color: transparent;
+            transition: color .5s ease-in;
+        }
+
+
+        &:hover:before {
+            color: rgba($cKey,.25);
+        }
+
+        &:target:before {
+            color: rgba($cKey,.75);
+        }
+    }
+}
