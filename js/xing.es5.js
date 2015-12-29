@@ -25,7 +25,7 @@
     }function at(n) {
       st = !0;l.x = n.pageX / (window.innerWidth / 2) - 1;l.y = n.pageY / (window.innerHeight / 2) - 1;
     }function ht() {
-      g = y.width = (window.innerHeight || y.offsetHeight) / 2;nt = y.height = (window.innerWidth || y.offsetWidth) / 2;s.fillStyle = i.bkgdColor;s.strokeStyle = i.lineColor;s.lineCap = "round";
+      g = y.width = (window.innerWidth || y.offsetWidth) / 2;nt = y.height = (window.innerHeight || y.offsetHeight) / 2;s.fillStyle = i.bkgdColor;s.strokeStyle = i.lineColor;s.lineCap = "round";
     }var y, d, r, u, f, e, o, h, v, lt, tt, et, k, it, rt, b, c, ot, ut, st;if ((i === void 0 && (i = {}), this.options = i, y = typeof t == "string" || t instanceof String ? document.getElementById(t) : t, y.tagName != "CANVAS")) throw "no canvas";for (d in n.options) i[d] = i[d] === undefined ? n.options[d] : i[d];var s = y.getContext("2d", { alpha: !i.bkgdColor }),
         l = { x: 0, y: 0 },
         ft,
