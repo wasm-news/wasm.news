@@ -163,6 +163,10 @@ article {
     .rfer {
         font-family: "SrcCode";
         font-size: .75em;
+
+        a {
+            white-space: nowrap;
+        }
     }
 }
 
