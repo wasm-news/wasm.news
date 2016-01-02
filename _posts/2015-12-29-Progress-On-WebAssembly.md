@@ -1,7 +1,7 @@
 ---
-title: "Merklizing ASTs"
-urlex: "http://wanderer.github.io/ethereum/ast/webassembly/2015/12/29/merklizing-ASTs/"
-categories: [article]
-tags: [information]
+title: "BaldrMonkey: the name of Mozilla's WebAssembly compiler"
+urlex: "https://bugzilla.mozilla.org/show_bug.cgi?id=1234985"
+categories: [information]
+tags: [information, Firefox]
 ---
-An article about WebAssembly's "Abstract Syntax Tree (AST)" and a concept for more security and code reuse.
+A "bug" filed by Luke Wagner bringing wasm to Firefox 
