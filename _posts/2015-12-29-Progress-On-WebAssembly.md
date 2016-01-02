@@ -1,7 +1,7 @@
 ---
-title: "BaldrMonkey: the name of Mozilla's WebAssembly compiler"
-urlex: "https://bugzilla.mozilla.org/show_bug.cgi?id=1234985"
-categories: [information]
-tags: [information, Firefox]
+title: "Progress On WebAssembly"
+urlex: "http://www.i-programmer.info/news/87-web-development/9291-progress-on-webassembly.html"
+categories: [article]
+tags: [introduction]
 ---
-A "bug" filed by Luke Wagner bringing wasm to Firefox 
+A brief post of the current state by Ian Elliot.
