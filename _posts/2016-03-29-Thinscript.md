@@ -1,7 +1,7 @@
 ---
-title: "ThinScript: A low-level programming language inspired by TypeScript"
+title: "ThinScript: An experimental programming language that compiles to both WebAssembly and JavaScript"
 urlex: "https://github.com/evanw/thinscript"
 categories: [tool]
 tags: []
 ---
-ThinScript is an experimental programming language that compiles to both WebAssembly and JavaScript.
+Thinscript is a low-level programming language inspired by TypeScript.
