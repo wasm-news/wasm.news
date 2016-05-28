@@ -1,0 +1,7 @@
+---
+title: "ast.run: WebAssembly playground"
+urlex: "http://ast.run"
+categories: [tool, experiment]
+tags: [Binaryen]
+---
+An easy to use playground created by Jan Wolski, powered by binaryen.
