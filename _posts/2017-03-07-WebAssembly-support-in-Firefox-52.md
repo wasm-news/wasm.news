@@ -4,4 +4,4 @@ urlex: "https://www.mozilla.org/en-US/firefox/52.0/releasenotes"
 categories: [information]
 tags: [Firefox, official]
 ---
-The Releasenotes of Firefox 52.0
+The releasenotes of Firefox 52.0
