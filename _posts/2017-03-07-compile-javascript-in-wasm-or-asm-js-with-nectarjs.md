@@ -5,6 +5,6 @@ author:
   name: Adrien THIERRY
   url: "https://www.linkedin.com/in/adrien-thierry-6448a664/"
 categories: [article]
-tags: [asm.js, wasm, nectarjs, javascript, compilation]
+tags: [asm.js, nectarjs, javascript, compilation]
 excerpt: With NectarJS, you can compile your JavaScript code to WASM, ASM.JS and more.
 ---
