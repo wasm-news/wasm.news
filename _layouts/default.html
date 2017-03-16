@@ -47,7 +47,7 @@
         <article>
             <div class="head right">
                 <a href="{{site.path_archive}}#{{page.date | date: '%B-%Y' | downcase}}" val="{{post.date}}" rel="date"><h3>{{ post.date | date_to_string }}</h3></a>
-                <h2>{{post.title}}</h2>
+                <a {% include link_attr.html %}><h2>{{post.title}}</h2></a>
             </div>
             <div class="body">{{ content }}</div>
             <div class="rfer">posted {% if post.author %} by <a href="{{post.author.url}}" rel="author nofollow" target="_blank">{{post.author.name}}</a>{% endif %}{% unless post.categories == empty %} in {% include taxonomy.html type='cat' %}{% endunless %}{% unless post.tags == empty %} tagged with {% include taxonomy.html type='tag' %}{% else %} without tags{% endunless %}.</div>
