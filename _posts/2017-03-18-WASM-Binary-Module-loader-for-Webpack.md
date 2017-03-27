@@ -2,7 +2,7 @@
 title: "WASM Binary Module loader for Webpack"
 urlex: "https://github.com/ballercat/wasm-loader"
 author:
-    name: vainl
+    name: Vainl
     url: "https://github.com/vainl"
 categories: [tool]
 tags: [JavaScript]
